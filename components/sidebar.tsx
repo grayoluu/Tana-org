@@ -31,6 +31,8 @@ const navigation = [
     title: "Impact",
     items: [
       { title: "Impact Dashboard", href: "/impact" },
+      { title: "Impact Stories", href: "/impact-stories" },
+      { title: "Data Dashboard", href: "/data-dashboard" },
       { title: "Environmental", href: "/impact/environmental" },
       { title: "Social", href: "/impact/social" },
       { title: "Economic", href: "/impact/economic" },

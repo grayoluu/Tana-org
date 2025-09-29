@@ -50,9 +50,24 @@ export function Header() {
           <Link href="/projects" className="text-sm font-medium hover:text-primary transition-colors">
             {t("nav.projects")}
           </Link>
-          <Link href="/impact" className="text-sm font-medium hover:text-primary transition-colors">
-            {t("nav.impact")}
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="sm" className="gap-1" aria-haspopup="true" aria-expanded="false">
+                {t("nav.impact")} <ChevronDown className="h-3 w-3" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem asChild>
+                <Link href="/impact">Impact Dashboard</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/impact-stories">Impact Stories</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/data-dashboard">Data Dashboard</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Link href="/docs" className="text-sm font-medium hover:text-primary transition-colors">
             {t("nav.documentation")}
           </Link>
